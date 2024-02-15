@@ -9,6 +9,17 @@
   margin: 15px;
 
   .info_region {
+    background-color: black;
+    box-shadow: 0 5px 10px 1px rgb(7, 203, 238);
+    border-radius: 10px;
+    width: 450px;
+    height: 100%;
+    padding: 20px;
+    margin: 50px;
+
+    display: flex;
+    justify-content: center;
+
     .region_ul {
       text-decoration: none;
 
