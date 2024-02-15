@@ -1,9 +1,11 @@
-import "./App.css";
+import "./App.scss";
+import Card from "./components/Card";
+import data from "./components/Card/data.json";
 
 function App() {
   return (
     <>
-      <h1>Hola</h1>
+      <Card data={data} />
     </>
   );
 }
