@@ -1,29 +1,6 @@
 //import "./CardModule.scss";
+import { ITest } from "../../models/ITest";
 import styles from "./Card.module.scss";
-
-interface ITest {
-  location: ILocation;
-  current: ICurrent;
-}
-
-interface ILocation {
-  name: string;
-  region: string;
-  country: string;
-  localtime: string;
-}
-
-interface ICurrent {
-  temp_c: number;
-  condition: ICondition;
-  wind_dir: string;
-}
-
-interface ICondition {
-  text: string;
-  icon: string;
-  code: number;
-}
 
 /* Llega data como prop de App.tsx, y muestra los datos del json */
 
@@ -32,6 +9,11 @@ function Card({ data }: { data: ITest }) {
 
   return (
     <div className={styles.info_container}>
+      <div className={styles.buscar}>
+        <input type="text" placeholder="Name city" />
+        <button type="submit">Buscar</button>
+      </div>
+
       <div className={styles.info_region}>
         <ul className={styles.region_ul}>
           <li className={styles.list}>
