@@ -37,6 +37,14 @@
         color: white;
         margin: 5px;
 
+        .list_location {
+          font-size: 12px;
+
+          .span {
+            color: red;
+          }
+        }
+
         .temperature {
           display: flex;
           align-items: center;
