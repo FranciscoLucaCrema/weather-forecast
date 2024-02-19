@@ -1,11 +1,10 @@
-export interface ITest {
+export interface IInformation {
   location: ILocation;
   current: ICurrent;
 }
 
 interface ILocation {
   name: string;
-  region: string;
   country: string;
   localtime: string;
 }
