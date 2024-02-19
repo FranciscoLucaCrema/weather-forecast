@@ -2,6 +2,7 @@ import { useState } from "react";
 import { IInformation } from "@/models/IInformation";
 import Card from "@/components/Card";
 import InputContainer from "./InputContainer";
+import Loader from "@/components/Shared/Loader";
 
 function Weather() {
   const [searchResults, setSearchResults] = useState<IInformation | null>(null);
@@ -9,7 +10,9 @@ function Weather() {
 
   const fetchData = async (city: string) => {
     setLoading(true);
-    const URL = `${process.env.API_URL_PARAMS}?key=${process.env.WEATHER_API_KEY}&q=${city}`;
+    /* maximum number of days allowed to show the API*/
+    const days = 4;
+    const URL = `${process.env.API_URL_PARAMS}?key=${process.env.WEATHER_API_KEY}&q=${city}&days=${days}`;
     return await fetch(URL).then(async (res) => {
       setLoading(false);
       if (!res.ok) return null;
@@ -23,7 +26,8 @@ function Weather() {
   return (
     <>
       <InputContainer fetchData={fetchData} />
-      <Card data={searchResults} loading={loading} />
+      {searchResults && !loading && <Card data={searchResults} />}
+      {loading && <Loader />}
     </>
   );
 }
