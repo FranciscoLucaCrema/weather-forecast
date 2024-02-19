@@ -1,10 +1,12 @@
+import styles from "./Button.module.scss";
+
 function Button({
   handleClick,
 }: {
   handleClick: (e: React.FormEvent<HTMLButtonElement>) => void;
 }) {
   return (
-    <button type="button" onClick={handleClick}>
+    <button className={styles.button} type="button" onClick={handleClick}>
       Buscar
     </button>
   );

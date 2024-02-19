@@ -1,12 +1,22 @@
+import styles from "./Input.module.scss";
+
 function Input({
   handleChange,
+  handleKeyUp,
 }: {
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleKeyUp: (e: React.KeyboardEvent<HTMLInputElement>) => void;
 }) {
   return (
-    <div>
-      <input type="text" placeholder="Name city" onChange={handleChange} />
-    </div>
+    <>
+      <input
+        className={styles.input}
+        onKeyUp={handleKeyUp}
+        type="text"
+        placeholder="Name city"
+        onChange={handleChange}
+      />
+    </>
   );
 }
 

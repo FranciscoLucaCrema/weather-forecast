@@ -1,10 +1,10 @@
-import { ITest } from "../../models/ITest";
+import { IInformation } from "@/models/IInformation";
 import styles from "./Card.module.scss";
 /* import Loader from "./Loader"; */
 
 /* Llega data como prop de App.tsx, y muestra los datos del json */
 
-function Card({ data }: { data: ITest | null }) {
+function Card({ data }: { data: IInformation | null }) {
   /*  console.log("informacion:", data); */
   return (
     <div className={styles.info_container}>
@@ -16,7 +16,7 @@ function Card({ data }: { data: ITest | null }) {
                 <h2>
                   Tiempo en{" "}
                   <span className={styles.span}>{data.location.name} </span> -{" "}
-                  <span className={styles.span}>{data.location.region} </span>!
+                  <span className={styles.span}>{data.location.country} </span>!
                 </h2>
               </div>
             </li>
