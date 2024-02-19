@@ -1,13 +1,8 @@
 import "./App.scss";
-import Card from "./components/Card";
-import data from "./components/Card/data.json";
+import Weather from "./components/Weather";
 
 function App() {
-  return (
-    <>
-      <Card data={data} />
-    </>
-  );
+  <Weather />;
 }
 
 export default App;
