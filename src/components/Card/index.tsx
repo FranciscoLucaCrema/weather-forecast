@@ -1,7 +1,6 @@
 import { IInformation } from "@/models/IInformation";
 import styles from "./Card.module.scss";
-import Loader from "@/components/Card/Loader";
-/* import Loader from "./Loader"; */
+import Loader from "@/components/Shared/Loader";
 
 /* Llega data como prop de App.tsx, y muestra los datos del json */
 
