@@ -25,6 +25,7 @@
 
     .region_ul {
       text-decoration: none;
+      padding: 0;
 
       display: flex;
       flex-direction: column;
@@ -49,6 +50,10 @@
           align-items: center;
         }
       }
+    }
+
+    .noData {
+      color: white;
     }
   }
 }
