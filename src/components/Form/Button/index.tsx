@@ -4,7 +4,7 @@ function Button({
   handleClick: (e: React.FormEvent<HTMLButtonElement>) => void;
 }) {
   return (
-    <button type="submit" onClick={handleClick}>
+    <button type="button" onClick={handleClick}>
       Buscar
     </button>
   );

@@ -8,16 +8,20 @@ function Weather() {
   const [searchResults, setSearchResults] = useState<ITest | null>(null);
   const [value, setValue] = useState("");
 
-  const fetchData = async (name: string) => {
-    const URL = `${process.env.API_URL_PARAMS}?key=${process.env.WEATHER_API_KEY}&q=${name}`;
+  const fetchData = async (city: string) => {
+    const URL = `${process.env.API_URL_PARAMS}?key=${process.env.WEATHER_API_KEY}&q=${city}`;
     const response = await fetch(URL);
+    /* console.log(response); */
+    if (!response.ok) {
+      return null;
+    }
     const data = await response.json();
-    console.log(data);
+    /*  console.log(data); */
     setSearchResults(data);
   };
 
-  const handleClick = () => {
-    fetchData(value);
+  const handleClick = async () => {
+    await fetchData(value);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -26,15 +30,11 @@ function Weather() {
 
   return (
     <>
-      <form>
-        <Input handleChange={handleChange} />
-        {/* <input type="text" placeholder="Name city" onChange={handleChange} /> */}
-        <Button handleClick={handleClick} />
-        {/*  <button type="submit" onClick={handleClick}>
-          Buscar
-        </button> */}
-      </form>
-      {searchResults && <Card data={searchResults} />}
+      <Input handleChange={handleChange} />
+
+      <Button handleClick={handleClick} />
+
+      <Card data={searchResults} />
     </>
   );
 }

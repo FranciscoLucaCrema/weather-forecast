@@ -5,6 +5,7 @@ import styles from "./Card.module.scss";
 /* Llega data como prop de App.tsx, y muestra los datos del json */
 
 function Card({ data }: { data: ITest | null }) {
+  /*  console.log("informacion:", data); */
   return (
     <div className={styles.info_container}>
       <div className={styles.info_region}>
