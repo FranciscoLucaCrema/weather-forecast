@@ -3,10 +3,12 @@ import { IInformation } from "@/models/IInformation";
 import Card from "@/components/Card";
 import InputContainer from "./InputContainer";
 import Loader from "@/components/Shared/Loader";
+import styles from "./Weather.module.scss";
+import "@/App.scss";
 
 function Weather() {
   const [searchResults, setSearchResults] = useState<IInformation | null>(null);
-  const [loading, setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
 
   const fetchData = async (city: string) => {
     setLoading(true);
@@ -24,11 +26,11 @@ function Weather() {
   };
 
   return (
-    <>
+    <div className={styles.main}>
       <InputContainer fetchData={fetchData} />
       {searchResults && !loading && <Card data={searchResults} />}
       {loading && <Loader />}
-    </>
+    </div>
   );
 }
 
