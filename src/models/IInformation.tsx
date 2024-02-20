@@ -16,7 +16,7 @@ interface ICurrent {
 }
 
 interface IForecast {
-  forecastDay: Array<IForecastDay>;
+  forecastday: Array<IForecastDay>;
 }
 
 interface IForecastDay {
