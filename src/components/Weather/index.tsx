@@ -8,7 +8,7 @@ import "@/App.scss";
 
 function Weather() {
   const [searchResults, setSearchResults] = useState<IInformation | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const fetchData = async (city: string) => {
     setLoading(true);
