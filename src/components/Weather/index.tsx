@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { IInformation } from "@/models/IInformation";
-import Card from "@/components/Card";
+import CardPrimary from "@/components/Cards/CardPrimary";
 import InputContainer from "./InputContainer";
 import Loader from "@/components/Shared/Loader";
 import styles from "./Weather.module.scss";
@@ -32,7 +32,7 @@ function Weather() {
   return (
     <div className={styles.main}>
       <InputContainer fetchData={fetchData} />
-      {searchResults && !loading && <Card data={searchResults} />}
+      {searchResults && !loading && <CardPrimary data={searchResults} />}
       {errorMessage && <p className={styles.noData}>{errorMessage.message}</p>}
       {loading && <Loader />}
     </div>
