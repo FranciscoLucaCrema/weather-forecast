@@ -1,5 +1,6 @@
 import { IInformation } from "@/models/IInformation";
 import styles from "./Card.module.scss";
+import formatDate from "@/utils/formatISOUTCDate";
 
 /* Llega data como prop de App.tsx, y muestra los datos del json */
 
@@ -26,7 +27,7 @@ function Card({ data }: { data: IInformation }) {
           <p>{data.current.condition.text}</p>
         </li>
         <li className={styles.list}>
-          <p>{data.location.localtime}</p>
+          <p>{formatDate(data.forecast.forecastday[0].date)}</p>
         </li>
       </ul>
     </div>
