@@ -5,6 +5,15 @@
   flex-direction: column;
   align-items: center;
 
+  .cards {
+    display: block;
+
+    .cardSecondary {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
   .noData {
     color: black;
   }
