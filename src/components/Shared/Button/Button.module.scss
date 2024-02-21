@@ -6,8 +6,8 @@
   border-radius: 10px;
   cursor: pointer;
   transition: 200ms all ease-in-out;
-}
 
-.button:hover {
-  color: rgb(5, 109, 207);
+  &:hover {
+    color: rgb(5, 109, 207);
+  }
 }
