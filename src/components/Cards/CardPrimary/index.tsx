@@ -17,15 +17,18 @@ function CardPrimary({ data }: { data: IInformation }) {
             </h2>
           </div>
         </li>
+
         <li className={styles.list}>
-          <div className={styles.temperature}>
+          <div className={styles.clime}>
             <img src={data.current.condition.icon} alt="icon" />
             <p>{data.current.temp_c}°C</p>
           </div>
+
+          <div className={styles.condition}>
+            <p>{data.current.condition.text}</p>
+          </div>
         </li>
-        <li className={styles.list}>
-          <p>{data.current.condition.text}</p>
-        </li>
+
         <li className={styles.list}>
           <p className={styles.date}>{formatDate(data.current.last_updated)}</p>
         </li>
