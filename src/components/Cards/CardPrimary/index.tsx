@@ -27,7 +27,7 @@ function CardPrimary({ data }: { data: IInformation }) {
           <p>{data.current.condition.text}</p>
         </li>
         <li className={styles.list}>
-          <p>{formatDate(data.forecast.forecastday[0].date)}</p>
+          <p className={styles.date}>{formatDate(data.current.last_updated)}</p>
         </li>
       </ul>
     </div>
