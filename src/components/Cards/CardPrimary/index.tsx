@@ -1,5 +1,5 @@
 import { IInformation } from "@/models/IInformation";
-import styles from "./CardPrimaryMain.module.scss";
+import styles from "./CardPrimary.module.scss";
 import formatDate from "@/utils/formatISOUTCDate";
 
 /* Llega data como prop de App.tsx, y muestra los datos del json */
