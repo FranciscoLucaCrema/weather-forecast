@@ -1,11 +1,12 @@
 function formatDate(date: string) {
-  const formattedDate = new Date(date);
+  const formattedDate = new Date(date).toLocaleString("en-US", {
+    timeZone: "UTC",
+    weekday: "long",
+    day: "2-digit",
+    month: "long",
+  });
 
-  const day = formattedDate.getUTCDate();
-  const month = formattedDate.getUTCMonth() + 1;
-  const year = formattedDate.getFullYear();
-
-  return `${day}/${month}/${year}`;
+  return formattedDate;
 }
 
 export default formatDate;

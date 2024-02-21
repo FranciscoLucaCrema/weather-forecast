@@ -13,13 +13,14 @@ interface ILocation {
 interface ICurrent {
   temp_c: number;
   condition: ICondition;
+  last_updated: string;
 }
 
 interface IForecast {
   forecastday: Array<IForecastDay>;
 }
 
-interface IForecastDay {
+export interface IForecastDay {
   date: string;
   day: IDay;
 }

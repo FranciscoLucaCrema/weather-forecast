@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { IInformation } from "@/models/IInformation";
 import CardPrimary from "@/components/Cards/CardPrimary";
+import CardSecondary from "@/components/Cards/CardSecondary";
 import InputContainer from "./InputContainer";
 import Loader from "@/components/Shared/Loader";
 import styles from "./Weather.module.scss";
@@ -32,7 +33,18 @@ function Weather() {
   return (
     <div className={styles.main}>
       <InputContainer fetchData={fetchData} />
-      {searchResults && !loading && <CardPrimary data={searchResults} />}
+      {searchResults && !loading && (
+        <div className={styles.cards}>
+          <CardPrimary data={searchResults} />
+          <div className={styles.cardSecondary}>
+            {searchResults.forecast.forecastday.map((day, index) => {
+              //ignore the first element of the forecastday array (today)
+              if (index === 0) return;
+              return <CardSecondary key={index} data={day} />;
+            })}
+          </div>
+        </div>
+      )}
       {errorMessage && <p className={styles.noData}>{errorMessage.message}</p>}
       {loading && <Loader />}
     </div>
