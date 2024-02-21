@@ -15,13 +15,29 @@
 
     display: flex;
     flex-direction: column;
-    align-items: center;
 
     .list {
       list-style: none;
+      text-align: center;
       font-size: 20px;
       color: white;
       margin: 5px;
+      width: 35vw;
+
+      .date {
+        position: relative;
+        margin-top: 5px;
+        width: 100%;
+        &::before {
+          content: "";
+          height: 2px;
+          background-color: white;
+          position: absolute;
+          top: -7px;
+          right: 0;
+          left: 0;
+        }
+      }
 
       .list_location {
         font-size: 12px;
@@ -34,6 +50,7 @@
       .temperature {
         display: flex;
         align-items: center;
+        justify-content: center;
       }
     }
   }
