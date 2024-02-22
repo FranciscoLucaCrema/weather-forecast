@@ -20,6 +20,8 @@
     }
 
     .condition {
+      display: flex;
+      flex-direction: row;
       margin-top: 5px;
     }
   }
@@ -94,15 +96,21 @@
 
       p {
         font-size: 18px;
-        padding: 6px 58px;
+        padding: 6px 12px;
 
         white-space: nowrap;
         overflow: hidden;
       }
 
       .condition {
+        display: flex;
+        flex-direction: column;
         margin-top: 0;
         white-space: initial;
+
+        span {
+          font-size: 20px;
+        }
       }
     }
 
@@ -132,7 +140,7 @@
 
       p {
         font-size: 15px;
-        padding: 6px 30px;
+        padding: 4px 8px;
 
         white-space: nowrap;
         overflow: hidden;
