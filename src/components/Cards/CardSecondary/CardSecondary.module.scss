@@ -42,3 +42,77 @@
     }
   }
 }
+
+@media screen and (max-width: 1190px) {
+  .info_subRegion {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 1130px) {
+  .info_subRegion {
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .info_subRegion {
+    padding: 6px;
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .info_subRegion {
+    .date {
+      font-size: 14px;
+    }
+
+    .days {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .info_subRegion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .date {
+      flex-direction: row;
+      width: 80%;
+      justify-content: space-between;
+      align-items: center;
+
+      img {
+        width: 20%;
+        height: 20%;
+        margin: 0;
+      }
+
+      p {
+        font-size: 15px;
+        padding: 4px 6px;
+
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      .condition {
+        margin-top: 0;
+        white-space: initial;
+      }
+    }
+
+    .days {
+      p {
+        margin-top: 0;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}

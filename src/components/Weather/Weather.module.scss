@@ -26,3 +26,16 @@
     color: black;
   }
 }
+
+@media screen and (max-width: 980px) {
+  .main {
+    width: 100%;
+    .cards {
+      width: 100%;
+      .cardSecondary {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
