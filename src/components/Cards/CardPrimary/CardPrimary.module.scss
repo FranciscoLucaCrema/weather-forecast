@@ -68,3 +68,40 @@
     }
   }
 }
+
+@media screen and (max-width: 980px) {
+  .info_region {
+    width: 85%;
+    height: 85%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .info_region {
+    width: 85%;
+    .region_ul {
+      .list {
+        .list_location {
+          font-size: 15px;
+        }
+
+        .clime {
+          font-size: 15px;
+
+          img {
+            width: 30%;
+            height: 30%;
+          }
+        }
+
+        .condition {
+          font-size: 15px;
+        }
+
+        .date {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
