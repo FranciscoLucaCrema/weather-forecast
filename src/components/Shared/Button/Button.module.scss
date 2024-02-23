@@ -8,6 +8,6 @@
   transition: 200ms all ease-in-out;
 
   &:hover {
-    color: rgb(5, 109, 207);
+    color: var(--color-button-hover);
   }
 }

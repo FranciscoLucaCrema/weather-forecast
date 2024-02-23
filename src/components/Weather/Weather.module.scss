@@ -23,7 +23,9 @@
   }
 
   .noData {
-    color: black;
+    font-size: 25px;
+    color: var(--color-error);
+    margin-top: 50px;
   }
 }
 

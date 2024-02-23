@@ -7,8 +7,8 @@
 }
 
 body {
-  background-image: url("./assests/image/ImageTest.jpg");
+  background-image: var(--theme-background);
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
-  color: var(--font-color, black);
+  color: var(--font-color);
 }
