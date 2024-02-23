@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IInformation } from "@/models/IInformation";
 import CardPrimary from "@/components/Cards/CardPrimary";
 import CardSecondary from "@/components/Cards/CardSecondary";
@@ -6,11 +6,13 @@ import InputContainer from "./InputContainer";
 import Loader from "@/components/Shared/Loader";
 import styles from "./Weather.module.scss";
 import "@/App.scss";
+import { Themes } from "@/models/ThemeChange";
 
 function Weather() {
   const [searchResults, setSearchResults] = useState<IInformation | null>(null);
   const [errorMessage, setErrorMessage] = useState<Error | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
+  const [theme, setTheme] = useState<Themes>(Themes.light);
 
   const fetchData = async (city: string) => {
     setLoading(true);
@@ -30,9 +32,20 @@ function Weather() {
     });
   };
 
+  useEffect(() => {
+    document.body.classList.toggle("light-theme", theme === Themes.light);
+    document.body.classList.toggle("dark-theme", theme === Themes.dark);
+  }, [theme]);
+
+  function handleThemeChange() {
+    if (theme === Themes.light) setTheme(Themes.dark);
+    else setTheme(Themes.light);
+  }
+
   return (
     <div className={styles.main}>
       <InputContainer fetchData={fetchData} />
+      <input type="checkbox" onChange={handleThemeChange}></input>
       {searchResults && !loading && (
         <div className={styles.cards}>
           <CardPrimary data={searchResults} />
