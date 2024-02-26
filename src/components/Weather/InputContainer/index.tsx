@@ -4,11 +4,16 @@ import Button from "@/components/Shared/Button";
 import Input from "@/components/Form/Input";
 import Switch from "@/components/ThemeSwitch";
 
-function InputContainer({ fetchData }: { fetchData: (city: string) => void }) {
+function InputContainer({
+  fetchData,
+}: {
+  fetchData: (city: string, days: number) => void;
+}) {
   const [value, setValue] = useState<string>("");
+  /*   const [days, setDays] = useState<number>(1); */
 
   const handleFetch = async () => {
-    await fetchData(value);
+    await fetchData(value, 4); /* el 4 lo reemplazo por el estado days */
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -23,6 +28,7 @@ function InputContainer({ fetchData }: { fetchData: (city: string) => void }) {
     <div className={styles.input_container}>
       <Input handleChange={handleChange} handleKeyUp={handleKeyUp} />
       <Button handleClick={handleFetch} />
+      {/* add input 1/4 days */}
       <Switch />
     </div>
   );
