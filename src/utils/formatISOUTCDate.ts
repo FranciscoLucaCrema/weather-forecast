@@ -1,4 +1,4 @@
-function formatDate(date: string) {
+function formatDate(date: string): string {
   const formattedDate = new Date(date).toLocaleString("en-US", {
     timeZone: "UTC",
     weekday: "long",
