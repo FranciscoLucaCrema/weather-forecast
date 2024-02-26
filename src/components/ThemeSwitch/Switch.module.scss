@@ -1,14 +1,14 @@
 .labelSwitch {
   position: relative;
   display: flex;
-  width: 50px;
+  width: 75px;
   height: 25px;
 
   .switch {
     position: absolute;
     cursor: pointer;
     inset: 0;
-    background-color: var(--neutral-color-300, #c9c8ca);
+    background-color: var(--brand-color);
     transition: 0.4s;
     border-radius: 34px;
 
@@ -19,7 +19,7 @@
       width: 17px;
       left: 5px;
       bottom: 4px;
-      background-color: var(--neutral-color-50, #fbfbfc);
+      background-color: var(--color-button-switch);
       transition: 0.4s;
       border-radius: 50%;
     }
@@ -32,7 +32,7 @@
 
     &:checked {
       + .switch {
-        background-color: var(--brand-color-500, #855dfb);
+        background-color: var(--brand-color);
 
         &::before {
           transform: translateX(22px);
@@ -42,18 +42,17 @@
 
     &:disabled {
       + .switch {
-        background-color: var(--brand-color-300, #c8b6fd);
         pointer-events: none;
 
         &::before {
-          background-color: var(--neutral-color-200, #f9f7ff);
+          background-color: var(--color-button-switch);
         }
       }
     }
 
     &:focus {
       + .switch {
-        box-shadow: 0 0 1px var(--brand-color-500, #855dfb);
+        box-shadow: 0 0 1px var(--brand-color);
       }
     }
   }
