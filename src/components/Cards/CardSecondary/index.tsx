@@ -1,6 +1,6 @@
 import { IForecastDay } from "@/models/IInformation";
 import styles from "./CardSecondary.module.scss";
-import formatDay from "@/utils/formatISOUTCday";
+import { formatDay } from "@/utils/DateFormat";
 
 function CardSecondary({ data, index }: { data: IForecastDay; index: number }) {
   return (
