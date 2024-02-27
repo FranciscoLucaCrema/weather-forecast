@@ -36,7 +36,6 @@ function InputContainer({
         <Input handleChange={handleChange} handleKeyUp={handleKeyUp} />
       </div>
       <Button handleClick={handleFetch} />
-      {/* add input 1/10 days */}
       <Switch />
     </div>
   );
