@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { IInformation } from "@/models/IInformation";
 import CardPrimary from "@/components/Cards/CardPrimary";
-import CardSecondary from "@/components/Cards/CardSecondary";
 import InputContainer from "./InputContainer";
 import Loader from "@/components/Shared/Loader";
 import styles from "./Weather.module.scss";
-import "@/App.scss";
 import WeatherService from "@/services/WeatherService";
+import Carousel from "@/components/Shared/Carousel";
+import "@/App.scss";
 
 function Weather() {
   const [searchResults, setSearchResults] = useState<IInformation | null>(null);
@@ -37,12 +37,9 @@ function Weather() {
         <div className={styles.cards}>
           <CardPrimary data={searchResults} />
           <div className={styles.cardSecondary}>
-            {searchResults.forecast.forecastday.length > 1 &&
-              searchResults.forecast.forecastday.map((day, index) => {
-                //ignore the first element of the forecastday array (today)
-                if (index === 0) return;
-                return <CardSecondary key={index} data={day} index={index} />;
-              })}
+            {searchResults.forecast.forecastday.length > 1 && (
+              <Carousel data={searchResults.forecast.forecastday} />
+            )}
           </div>
         </div>
       )}
