@@ -36,11 +36,11 @@ function Weather() {
       {searchResults && !loading && (
         <div className={styles.cards}>
           <CardPrimary data={searchResults} />
-          <div className={styles.cardSecondary}>
-            {searchResults.forecast.forecastday.length > 1 && (
+          {searchResults.forecast.forecastday.length > 1 && (
+            <div className={styles.carouselConteiner}>
               <Carousel data={searchResults.forecast.forecastday} />
-            )}
-          </div>
+            </div>
+          )}
         </div>
       )}
       {errorMessage && <p className={styles.noData}>{errorMessage.message}</p>}
