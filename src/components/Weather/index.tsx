@@ -13,7 +13,7 @@ function Weather() {
   const [errorMessage, setErrorMessage] = useState<Error | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
 
-  const fetchData = async (city: string, days: number = 4) => {
+  const fetchData = async (city: string, days: number) => {
     setLoading(true);
     /* maximum number of days allowed to show the API*/
 
