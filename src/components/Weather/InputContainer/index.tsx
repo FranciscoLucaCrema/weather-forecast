@@ -14,7 +14,7 @@ function InputContainer({
   const [days, setDays] = useState<number>(1);
 
   const handleFetch = async () => {
-    await fetchData(value, days); /* el 4 lo reemplazo por el estado days */
+    await fetchData(value, days);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -31,10 +31,12 @@ function InputContainer({
 
   return (
     <div className={styles.input_container}>
-      <Input handleChange={handleChange} handleKeyUp={handleKeyUp} />
+      <div className={styles.inputs}>
+        <InputSelect handleSelectDays={handleSelectDays} />
+        <Input handleChange={handleChange} handleKeyUp={handleKeyUp} />
+      </div>
       <Button handleClick={handleFetch} />
       {/* add input 1/10 days */}
-      <InputSelect handleSelectDays={handleSelectDays} />
       <Switch />
     </div>
   );
