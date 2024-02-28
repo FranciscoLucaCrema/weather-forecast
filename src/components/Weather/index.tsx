@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { IInformation } from "@/models/IInformation";
+import { IForecastDay, IInformation } from "@/models/IInformation";
 import CardPrimary from "@/components/Cards/CardPrimary";
 import InputContainer from "./InputContainer";
 import Loader from "@/components/Shared/Loader";
@@ -12,13 +12,15 @@ function Weather() {
   const [searchResults, setSearchResults] = useState<IInformation | null>(null);
   const [errorMessage, setErrorMessage] = useState<Error | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
+  const [mock, setMock] = useState<IForecastDay[] | undefined>();
 
-  const fetchData = async (city: string, days: number) => {
+  const fetchData = async (city: string) => {
     setLoading(true);
-    /* maximum number of days allowed to show the API*/
 
     const weatherService = new WeatherService();
-    const response = await weatherService.getWeather(city, days);
+    const response = await weatherService.getWeather(city);
+    const mockData = await weatherService.getMockDays();
+    console.log("mockData: ", mockData);
     setLoading(false);
 
     if (!response) {
@@ -28,6 +30,13 @@ function Weather() {
       setSearchResults(response);
       setErrorMessage(null);
     }
+    if (!mockData) {
+      setErrorMessage(new Error("Mock error"));
+      setMock(undefined);
+    } else {
+      setErrorMessage(null);
+      setMock(mockData);
+    }
   };
 
   return (
@@ -36,9 +45,9 @@ function Weather() {
       {searchResults && !loading && (
         <div className={styles.cards}>
           <CardPrimary data={searchResults} />
-          {searchResults.forecast.forecastday.length > 1 && (
-            <div className={styles.carouselConteiner}>
-              <Carousel data={searchResults.forecast.forecastday} />
+          {mock && (
+            <div className={styles.carousel}>
+              <Carousel data={mock} />
             </div>
           )}
         </div>
