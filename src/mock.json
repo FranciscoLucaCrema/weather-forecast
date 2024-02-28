@@ -17,7 +17,7 @@
       "mintemp_c": 19.3,
       "condition": {
         "text": "Sunny",
-        "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png"
+        "icon": "//cdn.weatherapi.com/weather/64x64/day/122.png"
       }
     }
   },
@@ -28,7 +28,7 @@
       "mintemp_c": 19.3,
       "condition": {
         "text": "Sunny",
-        "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png"
+        "icon": "//cdn.weatherapi.com/weather/64x64/night/119.png"
       }
     }
   },
@@ -39,7 +39,7 @@
       "mintemp_c": 19.3,
       "condition": {
         "text": "Sunny",
-        "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png"
+        "icon": "//cdn.weatherapi.com/weather/64x64/day/143.png"
       }
     }
   },
@@ -50,7 +50,7 @@
       "mintemp_c": 19.3,
       "condition": {
         "text": "Sunny",
-        "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png"
+        "icon": "//cdn.weatherapi.com/weather/64x64/day/176.png"
       }
     }
   },
@@ -61,7 +61,7 @@
       "mintemp_c": 19.3,
       "condition": {
         "text": "Sunny",
-        "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png"
+        "icon": "//cdn.weatherapi.com/weather/64x64/night/116.png"
       }
     }
   },
@@ -72,7 +72,7 @@
       "mintemp_c": 19.3,
       "condition": {
         "text": "Sunny",
-        "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png"
+        "icon": "//cdn.weatherapi.com/weather/64x64/day/119.png"
       }
     }
   },
