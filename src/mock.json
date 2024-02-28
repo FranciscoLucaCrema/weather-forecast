@@ -1,0 +1,90 @@
+[
+  {
+    "date": "2024-02-29",
+    "day": {
+      "maxtemp_c": 35.4,
+      "mintemp_c": 19.3,
+      "condition": {
+        "text": "Sunny",
+        "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png"
+      }
+    }
+  },
+  {
+    "date": "2024-03-01",
+    "day": {
+      "maxtemp_c": 35.4,
+      "mintemp_c": 19.3,
+      "condition": {
+        "text": "Sunny",
+        "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png"
+      }
+    }
+  },
+  {
+    "date": "2024-03-02",
+    "day": {
+      "maxtemp_c": 35.4,
+      "mintemp_c": 19.3,
+      "condition": {
+        "text": "Sunny",
+        "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png"
+      }
+    }
+  },
+  {
+    "date": "2024-03-03",
+    "day": {
+      "maxtemp_c": 35.4,
+      "mintemp_c": 19.3,
+      "condition": {
+        "text": "Sunny",
+        "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png"
+      }
+    }
+  },
+  {
+    "date": "2024-03-04",
+    "day": {
+      "maxtemp_c": 35.4,
+      "mintemp_c": 19.3,
+      "condition": {
+        "text": "Sunny",
+        "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png"
+      }
+    }
+  },
+  {
+    "date": "2024-03-05",
+    "day": {
+      "maxtemp_c": 35.4,
+      "mintemp_c": 19.3,
+      "condition": {
+        "text": "Sunny",
+        "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png"
+      }
+    }
+  },
+  {
+    "date": "2024-03-06",
+    "day": {
+      "maxtemp_c": 35.4,
+      "mintemp_c": 19.3,
+      "condition": {
+        "text": "Sunny",
+        "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png"
+      }
+    }
+  },
+  {
+    "date": "2024-03-07",
+    "day": {
+      "maxtemp_c": 35.4,
+      "mintemp_c": 19.3,
+      "condition": {
+        "text": "Sunny",
+        "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png"
+      }
+    }
+  }
+]
