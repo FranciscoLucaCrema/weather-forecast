@@ -1,13 +1,40 @@
+import { IForecastDay } from "@/models/IInformation";
 import styles from "./carousel.module.scss";
 import CardSecondary from "@/components/Cards/CardSecondary";
-import { IForecastDay } from "@/models/IInformation";
+import { useState } from "react";
 
 function Carousel({ data }: { data: IForecastDay[] }) {
+  const [activeIndex, setActiveIndex] = useState(1);
+
+  const nextSlide = () => {
+    setActiveIndex((prevIndex) =>
+      prevIndex === data.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+  const prevSlide = () => {
+    setActiveIndex((prevIndex) =>
+      prevIndex === 0 ? data.length - 1 : prevIndex - 1
+    );
+  };
+
   return (
     <div className={styles.carousel}>
-      {data.map((day, index) => {
+      <div className={styles.btnContainer}>
+        <button
+          onClick={prevSlide}
+          className={`${styles.carousel__btn} ${styles.previous}`}
+        >
+          &lt;
+        </button>
+        <button
+          onClick={nextSlide}
+          className={`${styles.carousel__btn} ${styles.next}`}
+        >
+          &gt;
+        </button>
+      </div>
+      {data.slice(activeIndex, activeIndex + 3).map((day, index) => {
         //ignore the first element of the forecastday array (today)
-        if (index === 0) return;
         return <CardSecondary key={index} data={day} index={index} />;
       })}
     </div>

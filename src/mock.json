@@ -5,8 +5,8 @@
       "maxtemp_c": 35.4,
       "mintemp_c": 19.3,
       "condition": {
-        "text": "Sunny",
-        "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png"
+        "text": "Overcast ",
+        "icon": "//cdn.weatherapi.com/weather/64x64/day/122.png"
       }
     }
   },
@@ -16,8 +16,8 @@
       "maxtemp_c": 35.4,
       "mintemp_c": 19.3,
       "condition": {
-        "text": "Sunny",
-        "icon": "//cdn.weatherapi.com/weather/64x64/day/122.png"
+        "text": "Light drizzle",
+        "icon": "//cdn.weatherapi.com/weather/64x64/night/266.png"
       }
     }
   },
@@ -27,8 +27,8 @@
       "maxtemp_c": 35.4,
       "mintemp_c": 19.3,
       "condition": {
-        "text": "Sunny",
-        "icon": "//cdn.weatherapi.com/weather/64x64/night/119.png"
+        "text": "Light rain",
+        "icon": "//cdn.weatherapi.com/weather/64x64/day/296.png"
       }
     }
   },
@@ -49,7 +49,7 @@
       "maxtemp_c": 35.4,
       "mintemp_c": 19.3,
       "condition": {
-        "text": "Sunny",
+        "text": "Patchy rain nearby",
         "icon": "//cdn.weatherapi.com/weather/64x64/day/176.png"
       }
     }
@@ -60,7 +60,7 @@
       "maxtemp_c": 35.4,
       "mintemp_c": 19.3,
       "condition": {
-        "text": "Sunny",
+        "text": "Partly Cloudy",
         "icon": "//cdn.weatherapi.com/weather/64x64/night/116.png"
       }
     }
@@ -82,8 +82,8 @@
       "maxtemp_c": 35.4,
       "mintemp_c": 19.3,
       "condition": {
-        "text": "Sunny",
-        "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png"
+        "text": "Moderate rain",
+        "icon": "//cdn.weatherapi.com/weather/64x64/day/302.png"
       }
     }
   }

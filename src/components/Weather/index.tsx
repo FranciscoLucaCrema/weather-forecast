@@ -20,7 +20,6 @@ function Weather() {
     const weatherService = new WeatherService();
     const response = await weatherService.getWeather(city);
     const mockData = await weatherService.getMockDays();
-    console.log("mockData: ", mockData);
     setLoading(false);
 
     if (!response) {
@@ -46,7 +45,7 @@ function Weather() {
         <div className={styles.cards}>
           <CardPrimary data={searchResults} />
           {mock && (
-            <div className={styles.carousel}>
+            <div className={styles.carouselWrapper}>
               <Carousel data={mock} />
             </div>
           )}
