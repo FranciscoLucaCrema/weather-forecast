@@ -2,7 +2,7 @@ import { IForecastDay } from "@/models/IInformation";
 import styles from "./CardSecondary.module.scss";
 import { formatDay } from "@/utils/DateFormat";
 
-function CardSecondary({ data, index }: { data: IForecastDay; index: number }) {
+function CardSecondary({ data }: { data: IForecastDay; index: number }) {
   return (
     <section className={styles.info_subRegion}>
       <div className={styles.cards}>
@@ -20,7 +20,7 @@ function CardSecondary({ data, index }: { data: IForecastDay; index: number }) {
         </div>
 
         <div className={styles.days}>
-          <p>{index === 0 ? "Tomorrow" : formatDay(data.date, "long")}</p>
+          <p>{formatDay(data.date, "long")}</p>
         </div>
       </div>
     </section>
