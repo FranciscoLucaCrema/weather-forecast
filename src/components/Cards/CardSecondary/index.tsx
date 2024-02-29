@@ -20,7 +20,7 @@ function CardSecondary({ data, index }: { data: IForecastDay; index: number }) {
         </div>
 
         <div className={styles.days}>
-          <p>{index === 1 ? "Tomorrow" : formatDay(data.date, "long")}</p>
+          <p>{index === 0 ? "Tomorrow" : formatDay(data.date, "long")}</p>
         </div>
       </div>
     </section>

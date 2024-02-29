@@ -8,12 +8,13 @@ function Carousel({ data }: { data: IForecastDay[] }) {
 
   const nextSlide = () => {
     setActiveIndex((prevIndex) =>
-      prevIndex === data.length - 1 ? 0 : prevIndex + 1
+      prevIndex === data.length - 3 ? 0 : prevIndex + 1
     );
   };
+
   const prevSlide = () => {
     setActiveIndex((prevIndex) =>
-      prevIndex === 0 ? data.length - 1 : prevIndex - 1
+      prevIndex === 0 ? data.length - 3 : prevIndex - 1
     );
   };
 

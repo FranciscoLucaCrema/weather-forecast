@@ -30,10 +30,8 @@ function Weather() {
       setErrorMessage(null);
     }
     if (!mockData) {
-      setErrorMessage(new Error("Mock error"));
       setMock(undefined);
     } else {
-      setErrorMessage(null);
       setMock(mockData);
     }
   };
