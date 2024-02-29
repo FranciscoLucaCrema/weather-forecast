@@ -6,6 +6,11 @@
   height: 60%;
   padding: 15px;
   border-radius: 10px;
+  transition: all 300ms ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 11px #383838be;
+  }
 
   .cards {
     width: 160px;
