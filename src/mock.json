@@ -86,5 +86,16 @@
         "icon": "//cdn.weatherapi.com/weather/64x64/day/302.png"
       }
     }
+  },
+  {
+    "date": "2024-03-08",
+    "day": {
+      "maxtemp_c": 35.4,
+      "mintemp_c": 19.3,
+      "condition": {
+        "text": "Moderate rain",
+        "icon": "//cdn.weatherapi.com/weather/64x64/day/302.png"
+      }
+    }
   }
 ]
