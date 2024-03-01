@@ -14,10 +14,21 @@
     align-items: center;
 
     .carouselWrapper {
-      width: 45%;
+      width: 100%;
       display: flex;
       flex-direction: row;
       justify-content: center;
+
+      .btnContainer {
+        width: 45%;
+        height: 45%;
+        position: relative;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
     }
   }
 

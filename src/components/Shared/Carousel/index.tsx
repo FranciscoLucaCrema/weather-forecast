@@ -1,10 +1,12 @@
 import { IForecastDay } from "@/models/IInformation";
 import styles from "./carousel.module.scss";
 import CardSecondary from "@/components/Cards/CardSecondary";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 function Carousel({ data }: { data: IForecastDay[] }) {
   const [activeIndex, setActiveIndex] = useState(1);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   const nextSlide = () => {
     setActiveIndex((prevIndex) =>
@@ -18,27 +20,43 @@ function Carousel({ data }: { data: IForecastDay[] }) {
     );
   };
 
+  const handleScroll = (scroll: number) => {
+    const positionScroll = scrollPosition + scroll;
+
+    setScrollPosition(positionScroll);
+
+    if (scrollRef.current) {
+      scrollRef.current.scrollLeft = positionScroll;
+    }
+  };
+
   return (
-    <div className={styles.carousel}>
-      <div className={styles.btnContainer}>
-        <button
-          onClick={prevSlide}
-          className={`${styles.carousel__btn} ${styles.previous}`}
-        >
-          &lt;
-        </button>
-        <button
-          onClick={nextSlide}
-          className={`${styles.carousel__btn} ${styles.next}`}
-        >
-          &gt;
-        </button>
+    <>
+      <button
+        onClick={() => {
+          prevSlide();
+          handleScroll(-200);
+        }}
+        className={`${styles.carousel__btn} ${styles.previous}`}
+      >
+        &lt;
+      </button>
+      <button
+        onClick={() => {
+          nextSlide();
+          handleScroll(200);
+        }}
+        className={`${styles.carousel__btn} ${styles.next}`}
+      >
+        &gt;
+      </button>
+      <div className={styles.carousel} ref={scrollRef}>
+        {data.slice(activeIndex).map((day, index) => {
+          // Ignorar el primer elemento del array de forecastday (hoy)
+          return <CardSecondary key={index} data={day} index={index} />;
+        })}
       </div>
-      {data.slice(activeIndex, activeIndex + 3).map((day, index) => {
-        //ignore the first element of the forecastday array (today)
-        return <CardSecondary key={index} data={day} index={index} />;
-      })}
-    </div>
+    </>
   );
 }
 
