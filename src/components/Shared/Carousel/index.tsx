@@ -1,58 +1,57 @@
 import { IForecastDay } from "@/models/IInformation";
 import styles from "./carousel.module.scss";
 import CardSecondary from "@/components/Cards/CardSecondary";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { Direction } from "@/models/TypeScroll";
 
 function Carousel({ data }: { data: IForecastDay[] }) {
-  const [activeIndex, setActiveIndex] = useState(1);
+  const scrollRef = useRef<HTMLDivElement | null>(null);
   const [scrollPosition, setScrollPosition] = useState(0);
-  const scrollRef = useRef<HTMLDivElement>(null);
 
-  const nextSlide = () => {
-    setActiveIndex((prevIndex) =>
-      prevIndex === data.length - 3 ? 0 : prevIndex + 1
-    );
-  };
+  useEffect(() => {
+    const listNode = scrollRef.current;
+    const infoSection = listNode?.querySelectorAll("section")[scrollPosition];
 
-  const prevSlide = () => {
-    setActiveIndex((prevIndex) =>
-      prevIndex === 0 ? data.length - 3 : prevIndex - 1
-    );
-  };
+    if (infoSection) {
+      infoSection.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  }, [scrollPosition]);
 
-  const handleScroll = (scroll: number) => {
-    const positionScroll = scrollPosition + scroll;
-
-    setScrollPosition(positionScroll);
-
-    if (scrollRef.current) {
-      scrollRef.current.scrollLeft = positionScroll;
+  const scrollToCards = (direction: Direction) => {
+    if (direction === "prev") {
+      setScrollPosition((curr) => {
+        const isFirstPosition = scrollPosition === 0;
+        /* If it is the first position, we do not go back further, otherwise we decrease the position by 1 */
+        return isFirstPosition ? 0 : curr - 1;
+      });
+    } else {
+      /* Check if we are in the last position */
+      const isLastPosition = scrollPosition === data.length - 1;
+      /* If we are not in the last position, we increase the position by 1 */
+      if (!isLastPosition) {
+        setScrollPosition((curr) => curr + 1);
+      }
     }
   };
 
   return (
     <>
       <button
-        onClick={() => {
-          prevSlide();
-          handleScroll(-200);
-        }}
+        onClick={() => scrollToCards("prev")}
         className={`${styles.carousel__btn} ${styles.previous}`}
       >
         &lt;
       </button>
       <button
-        onClick={() => {
-          nextSlide();
-          handleScroll(200);
-        }}
+        onClick={() => scrollToCards("next")}
         className={`${styles.carousel__btn} ${styles.next}`}
       >
         &gt;
       </button>
       <div className={styles.carousel} ref={scrollRef}>
-        {data.slice(activeIndex).map((day, index) => {
-          // Ignorar el primer elemento del array de forecastday (hoy)
+        {data.map((day, index) => {
           return <CardSecondary key={index} data={day} index={index} />;
         })}
       </div>
