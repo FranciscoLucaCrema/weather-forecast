@@ -16,12 +16,13 @@ class WeatherService {
     return response;
   }
 
-  async getMockDays(): Promise<IForecastDay[] | null> {
+  async getMockDays(days: number): Promise<IForecastDay[] | null> {
     try {
       const response = await fetch("./src/mock.json");
       if (response.ok) {
         const data = await response.json();
-        return data as IForecastDay[];
+        const formattedData = data.slice(0, days);
+        return formattedData as IForecastDay[];
       } else {
         throw new Error("Error al obtener los datos del mock");
       }

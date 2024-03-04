@@ -12,14 +12,15 @@ function Weather() {
   const [searchResults, setSearchResults] = useState<IInformation | null>(null);
   const [errorMessage, setErrorMessage] = useState<Error | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
-  const [mock, setMock] = useState<IForecastDay[] | undefined>();
+  const [mock, setMock] = useState<IForecastDay[] | null>(null);
 
-  const fetchData = async (city: string) => {
+  const fetchData = async (city: string, days: number) => {
     setLoading(true);
 
     const weatherService = new WeatherService();
     const response = await weatherService.getWeather(city);
-    const mockData = await weatherService.getMockDays();
+    const mockData = await weatherService.getMockDays(days);
+
     setLoading(false);
 
     if (!response) {
@@ -29,8 +30,9 @@ function Weather() {
       setSearchResults(response);
       setErrorMessage(null);
     }
+
     if (!mockData) {
-      setMock(undefined);
+      setMock(null);
     } else {
       setMock(mockData);
     }
@@ -42,7 +44,7 @@ function Weather() {
       {searchResults && !loading && (
         <div className={styles.cards}>
           <CardPrimary data={searchResults} />
-          {mock && (
+          {mock && mock.length > 0 && (
             <div className={styles.carouselWrapper}>
               <div className={styles.btnContainer}>
                 <Carousel data={mock} />

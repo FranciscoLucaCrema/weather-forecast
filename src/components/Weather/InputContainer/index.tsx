@@ -11,7 +11,7 @@ function InputContainer({
   fetchData: (city: string, days: number) => void;
 }) {
   const [value, setValue] = useState<string>("");
-  const [days, setDays] = useState<number>(1);
+  const [days, setDays] = useState<number>(0);
 
   const handleFetch = async () => {
     await fetchData(value, days);
@@ -32,7 +32,10 @@ function InputContainer({
   return (
     <div className={styles.input_container}>
       <div className={styles.inputs}>
-        <InputSelect handleSelectDays={handleSelectDays} />
+        <InputSelect
+          handleSelectDays={handleSelectDays}
+          daysOptions={[0, 1, 2, 3, 4, 5, 6, 7, 8]}
+        />
         <Input handleChange={handleChange} handleKeyUp={handleKeyUp} />
       </div>
       <Button handleClick={handleFetch} />
