@@ -13,6 +13,7 @@ function Weather() {
   const [errorMessage, setErrorMessage] = useState<Error | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [mock, setMock] = useState<IForecastDay[] | null>(null);
+  const apiMaxDays = process.env.MAX_API_FORECAST_DAYS;
 
   const fetchData = async (city: string, days: number) => {
     setLoading(true);
@@ -40,7 +41,10 @@ function Weather() {
 
   return (
     <div className={styles.main}>
-      <InputContainer fetchData={fetchData} />
+      <InputContainer
+        fetchData={fetchData}
+        apiMaxDays={apiMaxDays ? parseInt(apiMaxDays) : 8}
+      />
       {searchResults && !loading && (
         <div className={styles.cards}>
           <CardPrimary data={searchResults} />

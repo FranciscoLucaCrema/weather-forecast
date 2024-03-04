@@ -5,15 +5,20 @@ function InputSelect({
   daysOptions,
 }: {
   handleSelectDays: (e: React.ChangeEvent<HTMLSelectElement>) => void;
-  daysOptions: number[];
+  daysOptions: number;
 }) {
+  const test = [];
+  for (let index = 0; index < daysOptions; index++) {
+    test.push(
+      <option key={index} value={index}>
+        {index + 1} Days
+      </option>
+    );
+  }
+
   return (
     <select className={styles.inputSelect} onChange={handleSelectDays}>
-      {daysOptions.map((option) => (
-        <option key={option} value={option}>
-          {option} Days
-        </option>
-      ))}
+      {test}
     </select>
   );
 }

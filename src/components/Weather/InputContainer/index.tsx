@@ -7,8 +7,10 @@ import InputSelect from "@/components/Form/Select";
 
 function InputContainer({
   fetchData,
+  apiMaxDays,
 }: {
   fetchData: (city: string, days: number) => void;
+  apiMaxDays: number;
 }) {
   const [value, setValue] = useState<string>("");
   const [days, setDays] = useState<number>(0);
@@ -34,7 +36,7 @@ function InputContainer({
       <div className={styles.inputs}>
         <InputSelect
           handleSelectDays={handleSelectDays}
-          daysOptions={[0, 1, 2, 3, 4, 5, 6, 7, 8]}
+          daysOptions={apiMaxDays}
         />
         <Input handleChange={handleChange} handleKeyUp={handleKeyUp} />
       </div>
