@@ -1,40 +1,24 @@
 import { IForecastDay } from "@/models/IInformation";
 import styles from "./carousel.module.scss";
 import CardSecondary from "@/components/Cards/CardSecondary";
-import { useEffect, useRef, useState } from "react";
-import { Direction } from "@/models/TypeScroll";
+import { useRef } from "react";
 
 function Carousel({ data }: { data: IForecastDay[] }) {
-  const scrollRef = useRef<HTMLDivElement | null>(null);
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const carouselRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    const listNode = scrollRef.current;
-    const infoSection = listNode?.querySelectorAll("section")[scrollPosition];
+  function scrollToCards(direction: string) {
+    const listNode = carouselRef.current;
+    const cardNode = listNode?.querySelectorAll("section")[0];
 
-    if (infoSection) {
-      infoSection.scrollIntoView({
-        behavior: "smooth",
-      });
-    }
-  }, [scrollPosition]);
-
-  const scrollToCards = (direction: Direction) => {
-    if (direction === "prev") {
-      setScrollPosition((curr) => {
-        const isFirstPosition = scrollPosition === 0;
-        /* If it is the first position, we do not go back further, otherwise we decrease the position by 1 */
-        return isFirstPosition ? 0 : curr - 1;
-      });
-    } else {
-      /* Check if we are in the last position */
-      const isLastPosition = scrollPosition === data.length - 1;
-      /* If we are not in the last position, we increase the position by 1 */
-      if (!isLastPosition) {
-        setScrollPosition((curr) => curr + 1);
+    if (listNode && cardNode) {
+      if (direction === "left") {
+        listNode!.scrollLeft -= cardNode.clientWidth + 10;
+      }
+      if (direction === "right") {
+        listNode!.scrollLeft += cardNode.clientWidth + 10;
       }
     }
-  };
+  }
 
   return (
     <>
@@ -42,20 +26,20 @@ function Carousel({ data }: { data: IForecastDay[] }) {
       {data.length > 1 && (
         <>
           <button
-            onClick={() => scrollToCards("prev")}
+            onClick={() => scrollToCards("left")}
             className={`${styles.carousel__btn} ${styles.previous}`}
           >
             &lt;
           </button>
           <button
-            onClick={() => scrollToCards("next")}
+            onClick={() => scrollToCards("right")}
             className={`${styles.carousel__btn} ${styles.next}`}
           >
             &gt;
           </button>
         </>
       )}
-      <div className={styles.carousel} ref={scrollRef}>
+      <div className={styles.carousel} ref={carouselRef}>
         {data.map((day, index) => {
           return <CardSecondary key={index} data={day} index={index} />;
         })}
