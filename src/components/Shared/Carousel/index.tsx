@@ -38,18 +38,22 @@ function Carousel({ data }: { data: IForecastDay[] }) {
 
   return (
     <>
-      <button
-        onClick={() => scrollToCards("prev")}
-        className={`${styles.carousel__btn} ${styles.previous}`}
-      >
-        &lt;
-      </button>
-      <button
-        onClick={() => scrollToCards("next")}
-        className={`${styles.carousel__btn} ${styles.next}`}
-      >
-        &gt;
-      </button>
+      {data.length > 1 && (
+        <>
+          <button
+            onClick={() => scrollToCards("prev")}
+            className={`${styles.carousel__btn} ${styles.previous}`}
+          >
+            &lt;
+          </button>
+          <button
+            onClick={() => scrollToCards("next")}
+            className={`${styles.carousel__btn} ${styles.next}`}
+          >
+            &gt;
+          </button>
+        </>
+      )}
       <div className={styles.carousel} ref={scrollRef}>
         {data.map((day, index) => {
           return <CardSecondary key={index} data={day} index={index} />;
