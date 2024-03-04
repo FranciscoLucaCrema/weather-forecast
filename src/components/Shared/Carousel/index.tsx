@@ -38,6 +38,7 @@ function Carousel({ data }: { data: IForecastDay[] }) {
 
   return (
     <>
+      {/* If the value of selected days is greater than 1, show the carousel buttons */}
       {data.length > 1 && (
         <>
           <button
