@@ -78,6 +78,16 @@
   .info_region {
     width: 85%;
     height: 85%;
+    .region_ul {
+      .list {
+        .date {
+          &::before {
+            right: -55%;
+            left: -55%;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -91,20 +101,25 @@
         }
 
         .clime {
-          font-size: 15px;
+          font-size: 22px;
 
           img {
-            width: 30%;
-            height: 30%;
+            width: 40%;
+            height: 40%;
           }
         }
 
         .condition {
-          font-size: 15px;
+          font-size: 20px;
         }
 
         .date {
-          font-size: 15px;
+          font-size: 20px;
+
+          &::before {
+            right: -40%;
+            left: -40%;
+          }
         }
       }
     }
