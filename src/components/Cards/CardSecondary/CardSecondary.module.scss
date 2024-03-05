@@ -14,6 +14,38 @@
     box-shadow: var(--box-shadow-cards-hover);
   }
 
+  &.oneCard {
+    .cards {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .date {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+
+        img {
+          margin-bottom: 0;
+        }
+
+        .condition {
+          display: flex;
+          flex-direction: column;
+          margin-top: 5px;
+        }
+      }
+
+      .days {
+        margin-left: 30px;
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+
   .cards {
     width: 160px;
     height: 100%;
@@ -95,6 +127,21 @@
     align-items: center;
     justify-content: center;
 
+    &.oneCard {
+      .cards {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .date {
+          p {
+            overflow: initial;
+          }
+        }
+      }
+    }
+
     .cards {
       .date {
         gap: 10px;
@@ -159,8 +206,51 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  .info_subRegion {
+    &.oneCard {
+      .cards {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 460px) {
   .info_subRegion {
+    &.oneCard {
+      .cards {
+        display: flex;
+        flex-direction: column;
+
+        .date {
+          flex-direction: column;
+          gap: 0;
+
+          img {
+            width: 70px;
+            height: 70px;
+          }
+        }
+
+        .days {
+          margin: 0;
+
+          &::before {
+            content: "";
+            height: 2px;
+            background-color: var(--line-color);
+            position: absolute;
+            top: -2px;
+            right: -120px;
+            left: -120px;
+            display: block;
+          }
+        }
+      }
+    }
+
     .date {
       p {
         font-size: 12px;

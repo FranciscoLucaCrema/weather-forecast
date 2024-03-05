@@ -2,9 +2,17 @@ import { IForecastDay } from "@/models/IInformation";
 import styles from "./CardSecondary.module.scss";
 import { formatDay } from "@/utils/DateFormat";
 
-function CardSecondary({ data }: { data: IForecastDay; index: number }) {
+function CardSecondary({
+  data,
+  oneCard,
+}: {
+  data: IForecastDay;
+  oneCard: boolean;
+}) {
   return (
-    <section className={styles.info_subRegion}>
+    <section
+      className={`${styles.info_subRegion} ${oneCard ? styles.oneCard : ""} `}
+    >
       <div className={styles.cards}>
         <div className={styles.date}>
           <img src={data.day.condition.icon} alt="Icon" />

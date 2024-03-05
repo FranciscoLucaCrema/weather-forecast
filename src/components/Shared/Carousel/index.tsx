@@ -41,7 +41,9 @@ function Carousel({ data }: { data: IForecastDay[] }) {
       )}
       <div className={styles.carousel} ref={carouselRef}>
         {data.map((day, index) => {
-          return <CardSecondary key={index} data={day} index={index} />;
+          return (
+            <CardSecondary key={index} data={day} oneCard={data.length === 1} />
+          );
         })}
       </div>
     </>

@@ -50,9 +50,7 @@ function Weather() {
           <CardPrimary data={searchResults} />
           {mock && mock.length > 0 && (
             <div className={styles.carouselWrapper}>
-              <div className={styles.btnContainer}>
-                <Carousel data={mock} />
-              </div>
+              <Carousel data={mock} />
             </div>
           )}
         </div>

@@ -14,21 +14,13 @@
     align-items: center;
 
     .carouselWrapper {
-      width: 100%;
+      width: 45%;
+      height: 45%;
+      position: relative;
       display: flex;
       flex-direction: row;
+      align-items: center;
       justify-content: center;
-
-      .btnContainer {
-        width: 45%;
-        height: 45%;
-        position: relative;
-
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-      }
     }
   }
 
@@ -36,16 +28,6 @@
     font-size: 25px;
     color: var(--color-error);
     margin-top: 50px;
-  }
-}
-
-@media screen and (max-width: 1920px) {
-  .main {
-    .cards {
-      .carouselWrapper {
-        width: 95%;
-      }
-    }
   }
 }
 
