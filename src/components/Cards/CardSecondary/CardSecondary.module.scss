@@ -24,23 +24,33 @@
       .date {
         display: flex;
         flex-direction: row;
-        gap: 50px;
+        margin: 0;
+        gap: 25px;
 
-        img {
-          margin-bottom: 0;
+        .max_min {
+          display: flex;
+          flex-direction: row;
+          gap: 25px;
+
+          img {
+            margin-bottom: 0;
+          }
         }
 
         .condition {
-          display: flex;
-          flex-direction: column;
-          margin-top: 5px;
+          margin: 0;
         }
       }
 
       .days {
         margin-left: 30px;
+
         &::before {
           display: none;
+        }
+
+        p {
+          margin-top: 0;
         }
       }
     }
@@ -57,15 +67,23 @@
       flex-direction: column;
       align-items: center;
 
-      img {
-        width: 70px;
-        height: 70px;
-        margin-bottom: 10px;
+      .max_min {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        img {
+          width: 70px;
+          height: 70px;
+          margin-bottom: 10px;
+        }
+
+        span {
+          margin-left: 5px;
+        }
       }
 
-      .condition {
-        display: flex;
-        flex-direction: row;
+      p {
         margin-top: 5px;
       }
     }
@@ -146,23 +164,25 @@
       .date {
         gap: 10px;
 
-        img {
-          width: 45%;
-          height: 45%;
-          margin: 0;
-        }
-
-        p {
-          font-size: 16px;
-          white-space: nowrap;
-          overflow: hidden;
-        }
-
-        .condition {
+        .max_min {
           white-space: initial;
 
-          span {
+          img {
+            width: 45%;
+            height: 45%;
+            margin: 0;
+          }
+
+          p {
             font-size: 16px;
+            white-space: nowrap;
+            overflow: hidden;
+          }
+
+          .condition {
+            span {
+              font-size: 16px;
+            }
           }
         }
       }
@@ -179,21 +199,24 @@
       .date {
         gap: 6px;
 
-        img {
-          width: 40%;
-          height: 40%;
-        }
-
-        p {
-          font-size: 15px;
-          padding: 4px 8px;
-
-          white-space: nowrap;
-          overflow: hidden;
-        }
-
-        .condition {
+        .max_min {
           white-space: initial;
+
+          img {
+            width: 40%;
+            height: 40%;
+          }
+
+          p {
+            font-size: 15px;
+            padding: 4px 8px;
+
+            white-space: nowrap;
+            overflow: hidden;
+          }
+
+          .condition {
+          }
         }
       }
 
@@ -212,6 +235,17 @@
       .cards {
         display: flex;
         flex-direction: column;
+
+        .date {
+          .condition {
+            display: flex;
+            flex-direction: column;
+          }
+
+          p {
+            font-size: 16px;
+          }
+        }
 
         .days {
           width: 90%;
@@ -239,16 +273,22 @@
     &.oneCard {
       .cards {
         display: flex;
-        flex-direction: column;
 
         .date {
           flex-direction: row;
-          padding: 4px;
+          margin: 4px;
           gap: 8px;
+          flex-wrap: wrap;
 
           img {
             width: 70px;
             height: 70px;
+          }
+        }
+
+        .days {
+          p {
+            margin-top: 5px;
           }
         }
       }
@@ -262,14 +302,29 @@
   }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 330px) {
   .info_subRegion {
     &.oneCard {
       .cards {
         .date {
           display: flex;
           justify-content: center;
-          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 250px) {
+  .info_subRegion {
+    &.oneCard {
+      .cards {
+        .date {
+          display: flex;
+          justify-content: center;
+          .max_min {
+            flex-wrap: wrap;
+          }
         }
       }
     }

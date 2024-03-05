@@ -16,13 +16,15 @@ function CardSecondary({
       <div className={styles.cards}>
         <div className={styles.date}>
           <img src={data.day.condition.icon} alt="Icon" />
-          <div className={styles.condition}>
-            <span>Max:</span>
-            <span>{data.day.maxtemp_c}°C</span>
-          </div>
-          <div className={styles.condition}>
-            <span>Min:</span>
-            <span>{data.day.mintemp_c}°C</span>
+          <div className={styles.max_min}>
+            <div className={styles.condition}>
+              <span>Max:</span>
+              <span>{data.day.maxtemp_c}°C</span>
+            </div>
+            <div className={styles.condition}>
+              <span>Min:</span>
+              <span>{data.day.mintemp_c}°C</span>
+            </div>
           </div>
           <p className={styles.condition}>{data.day.condition.text}</p>
         </div>
