@@ -212,6 +212,23 @@
       .cards {
         display: flex;
         flex-direction: column;
+
+        .days {
+          width: 90%;
+          margin: 0;
+
+          &::before {
+            content: "";
+            height: 2px;
+            margin: 0 5%;
+            background-color: var(--line-color);
+            position: absolute;
+            top: -2px;
+            right: 0;
+            left: 0;
+            display: block;
+          }
+        }
       }
     }
   }
@@ -225,27 +242,13 @@
         flex-direction: column;
 
         .date {
-          flex-direction: column;
-          gap: 0;
+          flex-direction: row;
+          padding: 4px;
+          gap: 8px;
 
           img {
             width: 70px;
             height: 70px;
-          }
-        }
-
-        .days {
-          margin: 0;
-
-          &::before {
-            content: "";
-            height: 2px;
-            background-color: var(--line-color);
-            position: absolute;
-            top: -2px;
-            right: -120px;
-            left: -120px;
-            display: block;
           }
         }
       }
@@ -254,6 +257,20 @@
     .date {
       p {
         font-size: 12px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .info_subRegion {
+    &.oneCard {
+      .cards {
+        .date {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
       }
     }
   }
