@@ -52,11 +52,15 @@
         font-size: 15px;
 
         .span {
+          font-family: "Lobster";
           color: var(--color-span);
         }
       }
 
       .clime {
+        font-family: "Bebas Neue";
+        font-weight: 300;
+        font-style: normal;
         display: flex;
         justify-content: center;
         align-items: center;

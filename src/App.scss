@@ -1,5 +1,8 @@
 @use "./styles/main.scss";
 @use "./styles/mixins.scss";
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
 
 * {
   padding: 0;
@@ -12,6 +15,7 @@ body {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   min-height: 100vh;
-  color: var(--font-color);
   @include mixins.themeChange;
+  font-family: "Crimson Text";
+  font-weight: 400;
 }
