@@ -22,14 +22,14 @@ function Weather() {
     const response = await weatherService.getWeather(city);
     const mockData = await weatherService.getMockDays(days);
 
-    setLoading(false);
-
     if (!response) {
       setErrorMessage(new Error("Your search didn't throw any results"));
       setSearchResults(null);
+      setLoading(false);
     } else {
       setSearchResults(response);
       setErrorMessage(null);
+      setLoading(false);
     }
 
     if (!mockData) {
