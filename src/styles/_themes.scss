@@ -1,10 +1,10 @@
 .dark-theme {
   --font-color: #f1c37d;
   --theme-background: url("assests/image/imageWeatherDark.jpg");
-  --background-color: rgba(0, 0, 0, 0.5);
+  --background-color: #00000080;
   --color-span: #eed8c9;
-  --line-color: rgb(255, 255, 255, 0.5);
-  --color-error: #f62a00;
+  --line-color: #ffffff80;
+  --color-error: #e1b80d;
   --color-text-input: #125373;
   --color-button-hover: #125373;
   --color-loading: #f1c37d;
@@ -17,10 +17,10 @@
 .light-theme {
   --font-color: #fcfdfe;
   --theme-background: url("assests/image/ImageTest.jpg");
-  --background-color: rgba(0, 0, 0, 0.5);
+  --background-color: #00000080;
   --color-span: #008dcb;
   --line-color: #e29930;
-  --color-error: black;
+  --color-error: #f62a00;
   --color-text-input: #217ca3;
   --color-button-hover: #217ca3;
   --color-loading: #637a9f;
