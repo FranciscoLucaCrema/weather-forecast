@@ -7,7 +7,7 @@ import ListItem from "@/components/Shared/ForecastList";
 
 function Forecast({ data }: { data: IForecastDay[] }) {
   const carouselRef = useRef<HTMLDivElement | null>(null);
-  const isDesktop = useWindowWidth(900);
+  const isDesktop = useWindowWidth(992);
 
   function scrollToCards(direction: string) {
     const listNode = carouselRef.current;
