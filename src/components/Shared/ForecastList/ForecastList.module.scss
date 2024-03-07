@@ -1,0 +1,117 @@
+.forecastContainer {
+  width: 100%;
+  padding: 15px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &_cards {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    &_img {
+      width: 60px;
+      height: 60px;
+    }
+
+    &_maxMin {
+      font-family: "Bebas Neue";
+      font-size: 20px;
+
+      display: flex;
+      gap: 10px;
+
+      &_max {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &_min {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .forecastContainer {
+    &_cards {
+      &_maxMin {
+        gap: 60px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .forecastContainer {
+    &_cards {
+      &_maxMin {
+        gap: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .forecastContainer {
+    &_cards {
+      &_img {
+        width: 40px;
+        height: 40px;
+      }
+      &_maxMin {
+        font-size: 17px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .forecastContainer {
+    &_cards {
+      width: 90%;
+      gap: 20px;
+
+      &_maxMin {
+        font-size: 15px;
+      }
+    }
+
+    p {
+      font-size: 13px;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .forecastContainer {
+    &_cards {
+      width: 65%;
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+
+      &_maxMin {
+        font-size: 20px;
+      }
+
+      &_img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+    p {
+      display: none;
+    }
+  }
+}
