@@ -1,5 +1,5 @@
 import { IForecastDay } from "@/models/IInformation";
-import styles from "./carousel.module.scss";
+import styles from "./Forecast.module.scss";
 import CardSecondary from "@/components/Cards/CardSecondary";
 import { useRef } from "react";
 import useWindowWidth from "@/hooks/useWindowWidth";
