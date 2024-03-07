@@ -5,7 +5,7 @@ import InputContainer from "./InputContainer";
 import Loader from "@/components/Shared/Loader";
 import styles from "./Weather.module.scss";
 import WeatherService from "@/services/WeatherService";
-import Carousel from "@/components/Shared/Carousel";
+import Forecast from "@/components/Shared/Forecast";
 import "@/App.scss";
 
 function Weather() {
@@ -50,7 +50,7 @@ function Weather() {
           <CardPrimary data={searchResults} />
           {mock && mock.length > 0 && (
             <div className={styles.carouselWrapper}>
-              <Carousel data={mock} />
+              <Forecast data={mock} />
             </div>
           )}
         </div>
