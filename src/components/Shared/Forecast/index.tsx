@@ -25,11 +25,9 @@ function Forecast({ data }: { data: IForecastDay[] }) {
 
   return (
     <>
-      {/* If the value of selected days is greater than 1, show the carousel buttons */}
-
       {isDesktop ? (
-        <>
-          {data.length > 1 ? (
+        <div className={styles.forecastCarousel} ref={carouselRef}>
+          {data.length > 1 && (
             <>
               <button
                 onClick={() => scrollToCards("left")}
@@ -44,25 +42,15 @@ function Forecast({ data }: { data: IForecastDay[] }) {
                 &gt;
               </button>
             </>
-          ) : (
-            <></>
           )}
-          <div className={styles.forecastCarousel} ref={carouselRef}>
-            {data.map((day, index) => {
-              return (
-                <CardSecondary
-                  key={index}
-                  data={day}
-                  oneCard={data.length === 1}
-                />
-              );
-            })}
-          </div>
-        </>
+          {data.map((day, index) => (
+            <CardSecondary key={index} data={day} oneCard={data.length === 1} />
+          ))}
+        </div>
       ) : (
         <ul className={styles.forecastList}>
           {data.map((day, index) => (
-            <ListItem key={index} data={day}></ListItem>
+            <ListItem key={index} data={day} />
           ))}
         </ul>
       )}
