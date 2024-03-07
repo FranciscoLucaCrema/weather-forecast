@@ -115,3 +115,20 @@
     }
   }
 }
+
+@media screen and (max-width: 250px) {
+  .forecastContainer {
+    &_cards {
+      gap: 15px;
+
+      &_maxMin {
+        font-size: 15px;
+      }
+
+      &_img {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+}
