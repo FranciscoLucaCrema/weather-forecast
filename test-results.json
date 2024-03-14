@@ -1,0 +1,168 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\EugenioBarroso\\Desktop\\Testing\\Estudio\\Weather-Forecast\\weather-forecast\\playwright.config.ts",
+    "rootDir": "C:/Users/EugenioBarroso/Desktop/Testing/Estudio/Weather-Forecast/weather-forecast",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/EugenioBarroso/Desktop/Testing/Estudio/Weather-Forecast/weather-forecast/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/EugenioBarroso/Desktop/Testing/Estudio/Weather-Forecast/weather-forecast",
+        "testIgnore": [],
+        "testMatch": [
+          "test/weather.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.42.1",
+    "workers": 4,
+    "webServer": {
+      "command": "npm run dev",
+      "url": "http://localhost:5174/",
+      "timeout": 120000
+    }
+  },
+  "suites": [
+    {
+      "title": "test\\weather.spec.ts",
+      "file": "test/weather.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "navigation",
+          "file": "test/weather.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [],
+          "suites": [
+            {
+              "title": "Search forecast with enter",
+              "file": "test/weather.spec.ts",
+              "line": 10,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "1 day forecast",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "",
+                      "projectName": "",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "status": "passed",
+                          "duration": 5993,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2024-03-14T11:38:01.265Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "d59cf341b45f8abea718-97b09321dbe13f1c95aa",
+                  "file": "test/weather.spec.ts",
+                  "line": 11,
+                  "column": 5
+                }
+              ]
+            },
+            {
+              "title": "search x days",
+              "file": "test/weather.spec.ts",
+              "line": 24,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "x day search",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "",
+                      "projectName": "",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "status": "passed",
+                          "duration": 1184,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2024-03-14T11:38:08.370Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "d59cf341b45f8abea718-a7b2a770b30888c79c4c",
+                  "file": "test/weather.spec.ts",
+                  "line": 25,
+                  "column": 5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2024-03-14T11:37:57.795Z",
+    "duration": 12038.739,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
