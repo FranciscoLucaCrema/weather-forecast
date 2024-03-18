@@ -24,8 +24,8 @@ test.describe('navigation', () => {
   test.describe('search x days', () => {
     test('x day search', async({page}) => {
       //search x days
-      let max = 7;
-      for (var i = 1; i <= max; i++){
+      const max = 7;
+      for (let i = 1; i <= max; i++){
         //pick x days in the selector
         await page.locator('//*[@id="root"]/div/div[1]/div/select').selectOption(i.toString());
         //create a new city input locator

@@ -92,12 +92,12 @@
                         {
                           "workerIndex": 0,
                           "status": "passed",
-                          "duration": 2198,
+                          "duration": 2252,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2024-03-18T12:48:07.807Z",
+                          "startTime": "2024-03-18T14:01:16.829Z",
                           "attachments": []
                         }
                       ],
@@ -132,12 +132,12 @@
                         {
                           "workerIndex": 0,
                           "status": "passed",
-                          "duration": 1827,
+                          "duration": 3771,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2024-03-18T12:48:10.843Z",
+                          "startTime": "2024-03-18T14:01:20.061Z",
                           "attachments": []
                         }
                       ],
@@ -172,12 +172,12 @@
                             {
                               "workerIndex": 0,
                               "status": "passed",
-                              "duration": 1073,
+                              "duration": 2172,
                               "errors": [],
                               "stdout": [],
                               "stderr": [],
                               "retry": 0,
-                              "startTime": "2024-03-18T12:48:12.672Z",
+                              "startTime": "2024-03-18T14:01:23.836Z",
                               "attachments": []
                             }
                           ],
@@ -212,12 +212,12 @@
                             {
                               "workerIndex": 0,
                               "status": "passed",
-                              "duration": 1162,
+                              "duration": 1784,
                               "errors": [],
                               "stdout": [],
                               "stderr": [],
                               "retry": 0,
-                              "startTime": "2024-03-18T12:48:13.748Z",
+                              "startTime": "2024-03-18T14:01:26.012Z",
                               "attachments": []
                             }
                           ],
@@ -240,8 +240,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-03-18T12:48:00.802Z",
-    "duration": 14731.552000000001,
+    "startTime": "2024-03-18T14:01:06.802Z",
+    "duration": 22198.592,
     "expected": 4,
     "skipped": 0,
     "unexpected": 0,
