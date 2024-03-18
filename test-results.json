@@ -92,12 +92,12 @@
                         {
                           "workerIndex": 0,
                           "status": "passed",
-                          "duration": 5993,
+                          "duration": 2198,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2024-03-14T11:38:01.265Z",
+                          "startTime": "2024-03-18T12:48:07.807Z",
                           "attachments": []
                         }
                       ],
@@ -132,12 +132,12 @@
                         {
                           "workerIndex": 0,
                           "status": "passed",
-                          "duration": 1184,
+                          "duration": 1827,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2024-03-14T11:38:08.370Z",
+                          "startTime": "2024-03-18T12:48:10.843Z",
                           "attachments": []
                         }
                       ],
@@ -149,6 +149,88 @@
                   "line": 25,
                   "column": 5
                 }
+              ],
+              "suites": [
+                {
+                  "title": "Theme toggle",
+                  "file": "test/weather.spec.ts",
+                  "line": 43,
+                  "column": 10,
+                  "specs": [
+                    {
+                      "title": "theme toggle working correctly",
+                      "ok": true,
+                      "tags": [],
+                      "tests": [
+                        {
+                          "timeout": 30000,
+                          "annotations": [],
+                          "expectedStatus": "passed",
+                          "projectId": "",
+                          "projectName": "",
+                          "results": [
+                            {
+                              "workerIndex": 0,
+                              "status": "passed",
+                              "duration": 1073,
+                              "errors": [],
+                              "stdout": [],
+                              "stderr": [],
+                              "retry": 0,
+                              "startTime": "2024-03-18T12:48:12.672Z",
+                              "attachments": []
+                            }
+                          ],
+                          "status": "expected"
+                        }
+                      ],
+                      "id": "d59cf341b45f8abea718-75769e6ee3eb1fab8b2d",
+                      "file": "test/weather.spec.ts",
+                      "line": 44,
+                      "column": 7
+                    }
+                  ]
+                },
+                {
+                  "title": "search place title displays correctly",
+                  "file": "test/weather.spec.ts",
+                  "line": 52,
+                  "column": 10,
+                  "specs": [
+                    {
+                      "title": "place title displays correctly",
+                      "ok": true,
+                      "tags": [],
+                      "tests": [
+                        {
+                          "timeout": 30000,
+                          "annotations": [],
+                          "expectedStatus": "passed",
+                          "projectId": "",
+                          "projectName": "",
+                          "results": [
+                            {
+                              "workerIndex": 0,
+                              "status": "passed",
+                              "duration": 1162,
+                              "errors": [],
+                              "stdout": [],
+                              "stderr": [],
+                              "retry": 0,
+                              "startTime": "2024-03-18T12:48:13.748Z",
+                              "attachments": []
+                            }
+                          ],
+                          "status": "expected"
+                        }
+                      ],
+                      "id": "d59cf341b45f8abea718-49a2933fade47baa39b2",
+                      "file": "test/weather.spec.ts",
+                      "line": 53,
+                      "column": 7
+                    }
+                  ]
+                }
               ]
             }
           ]
@@ -158,9 +240,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-03-14T11:37:57.795Z",
-    "duration": 12038.739,
-    "expected": 2,
+    "startTime": "2024-03-18T12:48:00.802Z",
+    "duration": 14731.552000000001,
+    "expected": 4,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

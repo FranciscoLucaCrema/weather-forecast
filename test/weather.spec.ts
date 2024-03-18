@@ -23,7 +23,7 @@ test.describe('navigation', () => {
 
   test.describe('search x days', () => {
     test('x day search', async({page}) => {
-      //search 1 day
+      //search x days
       let max = 7;
       for (var i = 1; i <= max; i++){
         //pick x days in the selector
@@ -39,7 +39,33 @@ test.describe('navigation', () => {
       }
 
     })
+
+    test.describe('Theme toggle', () => {
+      test('theme toggle working correctly', async({page}) => {
+        //click on theme toggle button
+        await page.locator('//span[@class="_switch_zehmk_7"]').click();
+        //check the 
+        await page.getByRole('main').isVisible();
+      })
+    })
+
+    test.describe('search place title displays correctly', () => {
+      test('place title displays correctly', async({page}) => {
+        //make a search 
+        //create a new city input locator
+        await page.getByPlaceholder('Name city').click();
+        await page.getByPlaceholder('Name city').fill('rosario');
+        //start search
+        await page.getByPlaceholder('Name city').press('Enter');
+        
+        //verify correct title content
+        await page.getByTitle('Rosario').isVisible();
+        await page.getByTitle('Argentina').isVisible();        
+      })
+    })
+
   })
+
 
   // test.describe('accesibility', () => {
   //   test('should not havve any automatically detectable accessibility issues', async ({page}) => {
