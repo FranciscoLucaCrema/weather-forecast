@@ -24,6 +24,14 @@
         {
           "outputFile": "test-results.json"
         }
+      ],
+      [
+        "line",
+        null
+      ],
+      [
+        "C:\\Users\\EugenioBarroso\\Desktop\\Testing\\Estudio\\Weather-Forecast\\weather-forecast\\node_modules\\allure-playwright\\dist\\index.js",
+        null
       ]
     ],
     "reportSlowTests": {
@@ -92,12 +100,12 @@
                         {
                           "workerIndex": 0,
                           "status": "passed",
-                          "duration": 2252,
+                          "duration": 5752,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2024-03-18T14:01:16.829Z",
+                          "startTime": "2024-03-18T14:39:54.435Z",
                           "attachments": []
                         }
                       ],
@@ -132,12 +140,12 @@
                         {
                           "workerIndex": 0,
                           "status": "passed",
-                          "duration": 3771,
+                          "duration": 4165,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2024-03-18T14:01:20.061Z",
+                          "startTime": "2024-03-18T14:40:01.590Z",
                           "attachments": []
                         }
                       ],
@@ -172,12 +180,12 @@
                             {
                               "workerIndex": 0,
                               "status": "passed",
-                              "duration": 2172,
+                              "duration": 2445,
                               "errors": [],
                               "stdout": [],
                               "stderr": [],
                               "retry": 0,
-                              "startTime": "2024-03-18T14:01:23.836Z",
+                              "startTime": "2024-03-18T14:40:05.760Z",
                               "attachments": []
                             }
                           ],
@@ -212,12 +220,12 @@
                             {
                               "workerIndex": 0,
                               "status": "passed",
-                              "duration": 1784,
+                              "duration": 1517,
                               "errors": [],
                               "stdout": [],
                               "stderr": [],
                               "retry": 0,
-                              "startTime": "2024-03-18T14:01:26.012Z",
+                              "startTime": "2024-03-18T14:40:08.209Z",
                               "attachments": []
                             }
                           ],
@@ -240,8 +248,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-03-18T14:01:06.802Z",
-    "duration": 22198.592,
+    "startTime": "2024-03-18T14:39:34.389Z",
+    "duration": 37217.379,
     "expected": 4,
     "skipped": 0,
     "unexpected": 0,

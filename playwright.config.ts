@@ -1,4 +1,5 @@
 import type { PlaywrightTestConfig } from "@playwright/test"
+import { testPlanFilter } from "allure-playwright/dist/testplan";
 
 const config: PlaywrightTestConfig = {
   testMatch: [
@@ -11,10 +12,14 @@ const config: PlaywrightTestConfig = {
     timeout: 120 * 1000,
 
   },
+
   reporter: [
     ['list'],
-    ['json', { outputFile: 'test-results.json'}]
-  ]
+    ['json', { outputFile: 'test-results.json'}],
+    ["line"], ["allure-playwright"]
+
+  ],
+  
 }
 
 export default config;
